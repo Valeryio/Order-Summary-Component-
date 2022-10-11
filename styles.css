@@ -1,0 +1,262 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    max-width: 1440px;
+    min-width: 1100;
+    width: 1440px;
+    margin: auto;
+    height: 900px;
+    font-family: Outfit, sans-serif ;
+    color: hsl(223, 47%, 23%);
+    background-color:  hsl(225, 100%, 94%) ;
+    border: 1px solid black;
+}
+
+svg
+{
+    z-index: -1000;
+    position: absolute;
+}
+
+main
+{
+    top: 50%;
+    left: 50%;
+    width: 26.9%;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    border-radius: 20px;
+    background-color: #fefefe;
+    transform: translate(-50%, -50%);
+    /*border: 1px solid black;*/
+}
+
+main>img
+{
+    height: 35%;
+    width: 100%;
+    margin-bottom: 8%;
+    box-sizing: border-box;
+    border-radius: 20px 20px 0 0;
+}
+
+h1, p
+{
+    display: flex;
+    margin-bottom: 4%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+p
+{
+    font-size: 16px;
+}
+
+.plan
+{
+    width: 84%;
+    height: 14%;
+    margin: 0 auto 5%;
+    border-radius: 10px;
+    position: relative;
+    background-color: #f8f9fe;
+}
+
+.plan img
+{
+    top: 20%;
+    left: 4%;
+    height: 60%;
+    position: absolute;
+}
+
+.plan h2
+{
+    top: 15%;
+    left: 24%;
+    position: absolute;
+    /*margin-bottom: 20%;*/
+    font-size: 18px;
+}
+
+.plan .price
+{
+    top: 45%;
+    left: 24%;
+    position: absolute;
+}
+
+.plan .change
+{
+    top: 35%;
+    right: 5%;
+    cursor: pointer;
+    text-decoration: none;
+    color:rgba(56, 42, 225, 1);
+    transition: text-decoration 2s ease-in-out;
+    position: absolute;
+}
+
+.plan>.change:hover
+{
+    text-decoration: underline;
+}
+
+button
+{
+    width: 82%;
+    height: 8%;
+    border: none;
+    display: block;
+    font-weight: 600;
+    margin: 0 auto 2%;
+    border-radius: 14px;
+    font-family: Outfit;
+    font-size: 14px;
+}
+
+.payment
+{
+    color: white;
+    position: relative;
+    background-color: rgba(56, 42, 225, 1);
+}
+
+.payment::after
+{
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    content: '';
+    height: 100%;
+    cursor: pointer;
+    margin: 0 auto 2%;
+    position: absolute;
+    border-radius: 14px;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0 5px 14px rgba(56, 42, 225, 1);
+}
+
+.payment:hover::after
+{
+    opacity: 1;
+}
+
+.Cancel
+{
+    cursor: pointer;
+    color: hsl(223, 47%, 23%);
+    transition: background 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.Cancel:hover
+{
+    background-color: #f8f9fe;
+}
+
+.attribution 
+{
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.attribution a
+{
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 1100px)
+{
+
+    main>img
+    {
+        margin-bottom: 10px;
+    }
+
+    h1, p
+    {
+        font-size: 25px;
+        margin-bottom: 2px;
+    }
+
+
+    p
+    {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .plan
+    {
+        height: 7rem;
+        font-size: 14px;
+        position: relative;
+    }
+
+    .plan img
+    {   
+        top: 2%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .plan img, .plan h2, .plan .price
+    {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .plan h2
+    {   
+    top: 40%;
+    font-size: 14px;
+    }
+
+    .plan .price
+    {
+        top: 60%;
+        position: absolute;
+    }
+
+    .plan .change
+    {
+        top: 80%;
+        right: 34%;
+        cursor: pointer;
+        position: absolute;
+    }
+
+
+    button
+    {
+    width: 65%;
+    height: 4%;
+    font-size: 10px;
+    }
+                          
+}
+
+@media screen and (max-width: 700px)
+{
+    main
+    {
+        width: 375px;
+    }
+}
